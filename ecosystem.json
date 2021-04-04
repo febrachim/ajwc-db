@@ -1,0 +1,64 @@
+{
+    "apps" : [
+      {
+        "name"            : "alphajwc.dashboard",
+        "script"          : "npm",
+        "args"            : "run start",
+        "ignore_watch"    : ["node_modules", "log/error.log", "log/access.log"],
+        "error_file"      : "log/error.log",
+        "out_file"        : "log/access.log",
+        "merge_logs"      : true,
+        "log_date_format" : "YYYY-MM-DD HH:mm Z"
+      },
+      {
+        "name"            : "alphajwc.dashboard.demo",
+        "script"          : "npm",
+        "args"            : "run start",
+        "ignore_watch"    : ["node_modules", "log/error.log", "log/access.log"],
+        "error_file"      : "log/error.log",
+        "out_file"        : "log/access.log",
+        "merge_logs"      : true,
+        "log_date_format" : "YYYY-MM-DD HH:mm Z"
+      },
+      {
+        "name"            : "alphajwc.dashboard.live",
+        "script"          : "npm",
+        "args"            : "run start",
+        "ignore_watch"    : ["node_modules", "log/error.log", "log/access.log"],
+        "error_file"      : "log/error.log",
+        "out_file"        : "log/access.log",
+        "merge_logs"      : true,
+        "log_date_format" : "YYYY-MM-DD HH:mm Z"
+      }
+
+    ],
+    "deploy" : {
+      "staging" : {
+        "user" : "skyshi",
+        "host" : "121.101.131.149",
+        "ssh_options": "StrictHostKeyChecking=no",
+        "ref"  : "origin/master",
+        "path" : "/home/skyshi/deploy/alphajwc.dashboard",
+        "repo"  : "git@gitlab.skyshi.io:alphajwc/alphajwc-admin.git",
+        "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --only alphajwc.dashboard"
+      },
+      "production" : {
+        "user" : "skyshi",
+        "host" : "121.101.131.149",
+        "ssh_options": "StrictHostKeyChecking=no",
+        "ref"  : "origin/master",
+        "path" : "/home/skyshi/deploy/alphajwc.production.dashboard",
+        "repo"  : "git@gitlab.skyshi.io:alphajwc/alphajwc-admin.git",
+        "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --only alphajwc.dashboard.demo"
+      },
+      "live" : {
+        "user" : "root",
+        "host" : "139.162.2.138",
+        "ssh_options": "StrictHostKeyChecking=no",
+        "ref"  : "origin/master",
+        "path" : "/var/www/dashboard",
+        "repo"  : "git@gitlab.skyshi.io:alphajwc/alphajwc-admin.git",
+        "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --only alphajwc.dashboard.live"
+      }
+    }
+  }

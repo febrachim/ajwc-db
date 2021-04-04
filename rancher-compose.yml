@@ -1,0 +1,5 @@
+version: '2'
+services:
+  web:
+    upgrade_strategy:
+      start_first: true

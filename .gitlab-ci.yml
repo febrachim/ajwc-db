@@ -1,0 +1,31 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  image: registry.skyshi.io/rancher-deploy:latest
+  variables:
+    STACK_NAME: alphajwc
+    RANCHER_ACCESS_KEY: 7883945FF628446F34F6
+    RANCHER_ENVIRONMENT: staging
+    RANCHER_SECRET_KEY: HpMvXcp7ZmbrWEw9K1wazk6e2pbJ6TCT3wiLL37m
+    RANCHER_URL: https://rancher.skyshi.io/v1
+  script:
+    - ""
+  tags:
+    - docker
+  only:
+    - master
+
+# notify:
+#   stage: notify
+#   image: registry.skyshi.io/notify-slack
+#   variables:
+#     # Change this to your channel webhook url
+#     SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+#     # Optional, variable starts with $, vailable variable see https://docs.gitlab.com/ee/ci/variables/
+#     TEMPLATE: "Pipeline success, last commit by $GITLAB_USER_EMAIL"
+#   script:
+#     - ""
+#   tags:
+#     - docker

@@ -1,0 +1,234 @@
+div.note .card-header .card-actions a {
+  padding: .35rem 0;
+  width: 57px;
+}
+
+div.note .card-header {
+  padding: .05rem .5rem;
+  min-height: 28px;
+}
+
+div.note .card-body {
+  padding: .8rem .8rem 0;
+}
+
+div.note .card-header .card-actions a:hover {
+  text-decoration: underline;
+  color: #151b1e;
+  cursor: pointer;
+}
+
+div.note a, .font-smaller {
+  font-size: .75rem;
+}
+
+div.note button {
+  padding: .15rem .25rem;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: fixed;
+  top: 200%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background:	white;
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 6px;
+  left: 6px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 6px;
+  left: 26px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 6px;
+  left: 45px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 26px;
+  left: 6px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 26px;
+  left: 26px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 26px;
+  left: 45px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 45px;
+  left: 6px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 45px;
+  left: 26px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 45px;
+  left: 45px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 10000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+.note-editor.note-frame.card {
+  margin: .25rem 0;
+}
+
+.modal-btn {
+  color: #fff;
+  cursor: pointer;
+}
+
+.scroll-sm {
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.scroll-md {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.scroll-lg {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border: 1px solid #c2cfd6;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.change-order-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.logo-bottom {
+  background-image: url("/static/img/skyshi-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  width: 84px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  background-size: 70px auto;
+}
+
+th a div {
+  margin-left: 1rem;
+  position: relative;
+  display: inline;
+}
+
+th div i.fa {
+  position: absolute;
+  right: 0;
+  font-size: 1rem;
+}
+
+th div i:first-child {
+  top: 0;
+}
+
+th div i:last-child {
+  bottom: 0;
+}
+
+th a:hover, li a {
+  cursor: pointer;
+}
+
+#saveNote, #cancelNote {
+  padding: 0 8px;
+  font-size: .82rem;
+}
+
+.total-data {
+  margin-left: 5px;
+}
+
+.card-head-add {
+  font-family: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7rem;
+  padding: 0.75rem 0;
+  color: #151b1e;
+  text-align: center;
+  border-left: 1px solid #c2cfd6;
+}
+
+.card-head-export {
+  position: absolute;
+  top: 0;
+  right: 11%;
+  width: 6rem;
+  padding: 0.75rem 0;
+  color: #151b1e;
+  text-align: center;
+  border-left: 1px solid #c2cfd6;
+}
+
+th.action-col {
+  width: 8.5rem;
+}
+
+.form-control:disabled {
+  background-color: #fff;
+}
+
+.select2-search__field {
+  width: 200px !important;
+}
+
+th.action-col.last-update-by {
+  width: 150px;
+}

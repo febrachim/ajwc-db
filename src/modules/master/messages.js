@@ -1,0 +1,91 @@
+export const Messages = {
+  sectorMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to sector`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: 'Sector not found',
+    edit_has_child: 'Cannot edit, still has subsectors',
+    edit_parent: 'Cannot become its own parent',
+    edit_success: 'Edit sector success',
+    delete_has_child: 'Cannot delete, still has subsectors',
+    delete_success: 'Delete sector success',
+  },
+  subsectorMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to sub sector`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+  },
+  countryMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to country`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: 'Country not found',
+    edit_success: 'Edit country success',
+    delete_success: 'Delete country success',
+  },
+  stageMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to stage`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: 'Stage not found',
+    edit_success: 'Edit stage success',
+    delete_success: 'Delete stage success',
+  },
+  actionMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to progress status`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: 'Progress status not found',
+    edit_success: 'Edit progress status success',
+    delete_success: 'Delete progress status success',
+  },
+  categoryMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to category`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: name => `${name} not found`,
+    edit_success: name => `Edit ${name.toLowerCase()} success`,
+    edit_has_child: 'Cannot edit, still has subcategories',
+    edit_parent: 'Cannot become its own parent',
+    delete_has_child: 'Cannot delete, still has subcategories',
+    delete_success: name => `Delete ${name.toLowerCase()} success`,
+  },
+  subcategoryMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to sub category`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+  },
+  statusMsg: {
+    create_success: name => `<strong>${name}</strong> has been added to status`,
+    create_duplicate: name => `<strong>${name}</strong> is already created`,
+    not_found: 'Status not found',
+    edit_success: 'Edit status success',
+    delete_success: 'Delete status success',
+  },
+  ratingMsg: {
+    create_success: 'New rating has been added',
+    create_duplicate: 'Rating already created',
+    not_found: 'Rating not found',
+    edit_success: 'Edit rating success',
+    delete_success: 'Delete rating success',
+  },
+  pipelineStatusMsg: {
+    create_success: 'New pipeline status has been added',
+    create_duplicate: 'Pipeline status already created',
+    not_found: 'Pipeline status not found',
+    edit_success: 'Edit pipeline status success',
+    delete_success: 'Delete pipeline status success',
+  },
+  priorityMsg: {
+    create_success: 'New priority has been added',
+    create_duplicate: 'Priority already created',
+    not_found: 'Priority not found',
+    edit_success: 'Edit priority success',
+    delete_success: 'Delete priority success',
+  },
+  currencyMsg: {
+    create_success: 'New currency has been added',
+    create_duplicate: 'Currency already created',
+    not_found: 'Currency not found',
+    edit_success: 'Edit currency success',
+    delete_success: 'Delete currency success',
+  },
+  validateMsg: {
+    name: 'cannot be empty',
+  },
+};
+
+export default { Messages };

@@ -1,0 +1,31 @@
+version: '2'
+services:
+  alphajwc-source:
+    image: registry.skyshi.io/source/git
+    environment:
+      - REPO_URL=$CI_REPOSITORY_URL
+      - COMMIT_SHA1=$CI_COMMIT_SHA
+    volumes:
+      - /app
+    labels:
+      io.rancher.container.start_once: 'true'
+
+  web:
+    image: node:8.9.4
+    working_dir: /app
+    command: ./bin/start.sh
+    depends_on:
+      - alphajwc-source
+    expose:
+      - 4000
+    network_mode: bridge
+    volumes_from:
+      - alphajwc-source
+    volumes:
+      - alphajwc-static:/app/files
+    labels:
+      - io.rancher.sidekicks=alphajwc-source
+      - rap.host=web.alphajwc.project.skyshi.io=>http:4000
+      - rap.le_host=web.alphajwc.project.skyshi.io
+volumes:
+  alphajwc-static:
